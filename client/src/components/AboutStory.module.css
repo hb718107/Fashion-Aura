@@ -1,0 +1,166 @@
+.aboutSection {
+  background: var(--surface-container-lowest);
+  padding: 5.5rem 0;
+  border-top: 1px solid var(--surface-container-high);
+  border-bottom: 1px solid var(--surface-container-high);
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.badgeWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badgeText {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  line-height: 1.15;
+  color: var(--on-surface);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.goldText {
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.leadText {
+  font-size: 1.1rem;
+  color: var(--on-surface);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.bodyText {
+  color: var(--on-surface-variant);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.bodyText strong {
+  color: var(--on-surface);
+}
+
+.featurePoints {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--on-surface-variant);
+}
+
+.rightCol {
+  display: flex;
+  justify-content: center;
+}
+
+.prestigeCard {
+  background: var(--surface-container);
+  border: 1px solid var(--primary);
+  padding: 2.25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--surface-container-high);
+  padding-bottom: 1.25rem;
+}
+
+.cardSub {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--primary);
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--on-surface);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statNum {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+  line-height: 1.3;
+}
+
+.cardFooter {
+  background: var(--surface-container-low);
+  border: 1px solid var(--surface-container-high);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+  line-height: 1.4;
+}

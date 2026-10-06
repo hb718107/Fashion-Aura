@@ -1,0 +1,232 @@
+.divisionsSection {
+  background-color: var(--surface-container-lowest);
+  border-top: 1px solid var(--surface-container-high);
+  border-bottom: 1px solid var(--surface-container-high);
+  padding: 5rem 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--surface-container-high);
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .sectionHeader {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accentLineWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.goldLine {
+  width: 32px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.badgeText {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  letter-spacing: -0.01em;
+  color: var(--on-surface);
+  text-transform: uppercase;
+}
+
+.headerDesc {
+  color: var(--on-surface-variant);
+  max-width: 440px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.divisionCard {
+  background: var(--surface-container);
+  border: 1px solid var(--surface-container-high);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.divisionCard:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cardContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.unitCode {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.12em;
+}
+
+.categoryBadge {
+  background: var(--surface-container-high);
+  color: var(--on-surface);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.3rem 0.6rem;
+  letter-spacing: 0.08em;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  color: var(--on-surface);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.divisionCard:hover .cardTitle {
+  color: var(--primary);
+}
+
+.cardDesc {
+  color: var(--on-surface-variant);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.tagsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.blockLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--outline);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--surface-container-high);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+  color: var(--on-surface);
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--surface-container-high);
+}
+
+@media (min-width: 640px) {
+  .specGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.specItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+}
+
+.cardFooter {
+  padding: 1.25rem 2rem;
+  background: var(--surface-container-low);
+  border-top: 1px solid var(--surface-container-high);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moqText {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--outline);
+}
+
+.exploreBtn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.exploreBtn:hover {
+  transform: translateX(4px);
+  color: var(--on-surface);
+}

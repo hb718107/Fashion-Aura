@@ -1,0 +1,112 @@
+.floatingBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(14, 14, 14, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(242, 202, 80, 0.4);
+  padding: 0.85rem 0;
+  z-index: 90;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.leftInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconBox {
+  width: 38px;
+  height: 38px;
+  background: rgba(242, 202, 80, 0.15);
+  border: 1px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textStack {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--on-surface);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.stats {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: var(--outline);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .clearBtn {
+    display: block;
+  }
+}
+
+.clearBtn:hover {
+  color: var(--on-surface);
+}
+
+.finalizeBtn {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.65rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.finalizeBtn:hover {
+  background: var(--primary);
+  box-shadow: 0 4px 15px rgba(242, 202, 80, 0.25);
+}
