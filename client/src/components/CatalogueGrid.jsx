@@ -8,6 +8,7 @@ export default function CatalogueGrid({
   activeCategory, 
   onSelectCategory, 
   onAddToRfq,
+  onProductClick,
   dossierItems
 }) {
   return (
@@ -42,7 +43,7 @@ export default function CatalogueGrid({
 
             return (
               <div key={item.id} className={styles.productCard}>
-                <div className={styles.imageContainer}>
+                <div className={styles.imageContainer} onClick={() => onProductClick(item)}>
                   <img 
                     src={item.image} 
                     alt={item.name} 
@@ -57,12 +58,12 @@ export default function CatalogueGrid({
                 </div>
 
                 <div className={styles.cardBody}>
-                  <div className={styles.cardTitles}>
+                  <div className={styles.cardTitles} onClick={() => onProductClick(item)} style={{ cursor: 'pointer' }}>
                     <span className={styles.subCategory}>{item.subCategory}</span>
                     <h3 className={styles.productName}>{item.name}</h3>
                   </div>
 
-                  <div className={styles.specTable}>
+                  <div className={styles.specTable} onClick={() => onProductClick(item)} style={{ cursor: 'pointer' }}>
                     <div className={styles.specRow}>
                       <span className={styles.specLabel}>Fabric Composition</span>
                       <span className={styles.specValue}>{item.fabric}</span>
@@ -98,8 +99,8 @@ export default function CatalogueGrid({
 
                     <button
                       type="button"
-                      title="Order Swatch Lab Sample"
-                      onClick={() => onAddToRfq({ ...item, name: `${item.name} (Lab Swatch)` }, 3)}
+                      title="Inspect Full Specimen Details"
+                      onClick={() => onProductClick(item)}
                       className={styles.sampleBtn}
                     >
                       <FlaskConical size={16} />

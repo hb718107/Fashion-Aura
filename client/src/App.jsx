@@ -10,6 +10,7 @@ import FloatingDossier from './components/FloatingDossier';
 import Footer from './components/Footer';
 import AdminDashboard from './components/AdminDashboard';
 import AdminLoginModal from './components/AdminLoginModal';
+import ProductDetailModal from './components/ProductDetailModal';
 import { categories } from './data/products';
 import { fetchProducts, saveStoredProducts, syncProductToDb, deleteProductFromDb } from './services/productService';
 
@@ -18,6 +19,7 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState('All Categories');
   const [dossierItems, setDossierItems] = useState([]);
   
+  const [selectedProductModal, setSelectedProductModal] = useState(null);
   const [isAdminRoute, setIsAdminRoute] = useState(false);
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -132,6 +134,7 @@ export default function App() {
           activeCategory={activeCategory}
           onSelectCategory={setActiveCategory}
           onAddToRfq={handleAddToRfq}
+          onProductClick={(p) => setSelectedProductModal(p)}
           dossierItems={dossierItems}
         />
         <ExportMetrics />
@@ -148,6 +151,14 @@ export default function App() {
       />
 
       <Footer />
+
+      <ProductDetailModal
+        product={selectedProductModal}
+        isOpen={Boolean(selectedProductModal)}
+        onClose={() => setSelectedProductModal(null)}
+        onAddToRfq={handleAddToRfq}
+        isAddedInRfq={dossierItems.some((d) => d.id === selectedProductModal?.id)}
+      />
 
       <AdminLoginModal 
         isOpen={showLoginModal}
