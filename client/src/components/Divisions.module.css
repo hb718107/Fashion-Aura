@@ -56,10 +56,12 @@
 
 .heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.4rem, 5.5vw, 2.8rem);
   letter-spacing: -0.01em;
   color: var(--on-surface);
   text-transform: uppercase;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .headerDesc {
@@ -67,6 +69,7 @@
   max-width: 440px;
   font-size: 0.95rem;
   line-height: 1.6;
+  word-break: break-word;
 }
 
 .cardsGrid {

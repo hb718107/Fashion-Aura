@@ -40,16 +40,19 @@
 
 .heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.4rem, 5.5vw, 2.8rem);
   letter-spacing: -0.01em;
   color: var(--on-surface);
   text-transform: uppercase;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .subText {
   color: var(--on-surface-variant);
   font-size: 0.9rem;
   max-width: 600px;
+  word-break: break-word;
 }
 
 .filterBar {
