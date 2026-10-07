@@ -277,6 +277,13 @@
   overflow-y: auto;
 }
 
+@media (max-width: 640px) {
+  .editModal {
+    padding: 1.25rem;
+    max-height: 94vh;
+  }
+}
+
 .modalTop {
   display: flex;
   align-items: center;
@@ -308,6 +315,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 }
 
 .formGroup {
@@ -346,6 +360,18 @@
   padding: 0.4rem;
 }
 
+@media (max-width: 640px) {
+  .categoryTabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .categoryTabs::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .tabBtn {
   background: transparent;
   border: none;
@@ -357,6 +383,15 @@
   padding: 0.5rem 0.9rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .tabBtn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.7rem;
+  }
 }
 
 .tabBtn:hover {

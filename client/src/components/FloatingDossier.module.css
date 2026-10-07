@@ -104,6 +104,27 @@
   align-items: center;
   gap: 0.4rem;
   transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .finalizeBtn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.68rem;
+  }
+
+  .iconBox {
+    width: 32px;
+    height: 32px;
+  }
+
+  .title {
+    font-size: 0.65rem;
+  }
+
+  .stats {
+    font-size: 0.68rem;
+  }
 }
 
 .finalizeBtn:hover {

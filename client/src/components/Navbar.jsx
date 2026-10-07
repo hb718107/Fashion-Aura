@@ -1,8 +1,14 @@
-import React from 'react';
-import { Globe, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Globe, ArrowRight, Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 export default function Navbar({ onOpenRfq }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
@@ -18,12 +24,12 @@ export default function Navbar({ onOpenRfq }) {
           </div>
         </a>
 
-        <nav className={styles.navLinks}>
-          <a href="#sports-division" className={styles.navItem}>Sports Wear</a>
-          <a href="#luxury-division" className={styles.navItem}>Fashion Wear</a>
-          <a href="#catalogue-matrix" className={styles.navItem}>B2B Catalogue</a>
-          <a href="#export-capabilities" className={styles.navItem}>Export Matrix</a>
-          <a href="#quick-rfq" className={styles.navItem}>Procurement</a>
+        <nav className={`${styles.navLinks} ${mobileMenuOpen ? styles.mobileNavOpen : ''}`}>
+          <a href="#sports-division" onClick={handleNavClick} className={styles.navItem}>Sports Wear</a>
+          <a href="#luxury-division" onClick={handleNavClick} className={styles.navItem}>Fashion Wear</a>
+          <a href="#catalogue-matrix" onClick={handleNavClick} className={styles.navItem}>B2B Catalogue</a>
+          <a href="#export-capabilities" onClick={handleNavClick} className={styles.navItem}>Export Matrix</a>
+          <a href="#quick-rfq" onClick={handleNavClick} className={styles.navItem}>Procurement</a>
         </nav>
 
         <div className={styles.actions}>
@@ -33,12 +39,21 @@ export default function Navbar({ onOpenRfq }) {
           </div>
 
           <button 
-            onClick={onOpenRfq}
+            onClick={() => { setMobileMenuOpen(false); onOpenRfq(); }}
             className={styles.quoteBtn}
             type="button"
           >
-            <span>Request a Quote</span>
+            <span>Quote</span>
             <ArrowRight size={15} />
+          </button>
+
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+            className={styles.menuToggleBtn}
+            type="button"
+            aria-label="Toggle Navigation"
+          >
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>

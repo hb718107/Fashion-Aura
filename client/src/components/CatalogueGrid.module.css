@@ -61,6 +61,19 @@
   padding: 0.35rem;
 }
 
+@media (max-width: 640px) {
+  .filterBar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.4rem;
+    scrollbar-width: none;
+  }
+  .filterBar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .filterBtn {
   background: transparent;
   border: none;
@@ -72,6 +85,15 @@
   padding: 0.55rem 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .filterBtn {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.7rem;
+  }
 }
 
 .filterBtn:hover {
@@ -88,6 +110,12 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+}
+
+@media (max-width: 640px) {
+  .productGrid {
+    gap: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {

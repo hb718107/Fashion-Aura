@@ -96,6 +96,14 @@
   padding-top: 0.5rem;
 }
 
+@media (max-width: 480px) {
+  .ctaCluster {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+}
+
 .primaryCta {
   background: var(--primary-container);
   color: var(--on-primary-container);
@@ -110,6 +118,13 @@
   gap: 0.5rem;
   transition: all 0.2s ease;
   box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+}
+
+@media (max-width: 480px) {
+  .primaryCta {
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+  }
 }
 
 .primaryCta:hover {
@@ -132,6 +147,13 @@
   gap: 0.75rem;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+@media (max-width: 480px) {
+  .secondaryCta {
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+  }
 }
 
 .secondaryCta:hover {
@@ -162,7 +184,7 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  height: clamp(400px, 50vw, 620px);
+  height: clamp(260px, 45vw, 620px);
 }
 
 .bannerImage {

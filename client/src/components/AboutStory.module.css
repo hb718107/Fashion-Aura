@@ -104,6 +104,13 @@
   position: relative;
 }
 
+@media (max-width: 640px) {
+  .prestigeCard {
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+}
+
 .cardHeader {
   display: flex;
   align-items: center;

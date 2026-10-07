@@ -168,6 +168,17 @@
   gap: 0;
 }
 
+@media (max-width: 480px) {
+  .dispatchForm {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .dispatchForm button {
+    padding: 0.65rem 1rem !important;
+  }
+}
+
 .dispatchForm input {
   background: var(--surface-container-low);
   border: 1px solid var(--surface-container-high);
